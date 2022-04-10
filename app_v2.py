@@ -1,5 +1,5 @@
 import streamlit as st
-import f_dl as f_dl
+import f_dl_secrets as f_dl
 import speech_recognition as sr 
 from io import StringIO
 
