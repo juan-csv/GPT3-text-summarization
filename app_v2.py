@@ -1,5 +1,5 @@
 import streamlit as st
-import f_dl_secrets as f_dl
+import f_dl as f_dl
 import speech_recognition as sr 
 from io import StringIO
 
@@ -77,7 +77,7 @@ if uploaded_file!=None:
             else:
                 language = "es-CO"
             EXAMPLE = r.recognize_google(audio, language=language)
-        st.success("Done!!!")
+        #st.success("Done!!!")
 
 ########################################################################################################################
 ########################################################################################################################
@@ -91,7 +91,7 @@ if uploaded_file!=None:
             input_text = st.text_area("Input text:", value=EXAMPLE, height=500)
 
         with col2:
-            with st.spinner(text="In progress..."):
+            with st.spinner(text="Creating summary..."):
 
                 # get result in json format
                 res = dict()
@@ -121,7 +121,7 @@ if uploaded_file!=None:
             input_text = st.text_area("Ingresar texto:", value=EXAMPLE, height=500)
 
         with col2:
-            with st.spinner(text="Procesando..."):
+            with st.spinner(text="Creando resumen..."):
 
                 # get result in json format
                 res = dict()
