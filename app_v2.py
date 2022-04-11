@@ -95,29 +95,28 @@ if uploaded_file!=None:
             process = st.button("Process")
 
         with col2:
-            if process:
-                with st.spinner(text="In progress..."):
+            with st.spinner(text="In progress..."):
 
-                    # get result in json format
-                    res = dict()
-                    res["ENGINE"] = ENGINE
-                    total_price = 0
-                    Res = ""
-                    for MODE in LIST_MODE:
-                        response, price = f_dl.get_ingerence_GPT3(input_text, MODE, ENGINE, select_box_language)
-                        Res += f"{MODE} : {response} \n\n"
-                        res[MODE] = response
-                        total_price += price
-                    res["PRICE"] = total_price
-                st.success("Done!!!")
+                # get result in json format
+                res = dict()
+                res["ENGINE"] = ENGINE
+                total_price = 0
+                Res = ""
+                for MODE in LIST_MODE:
+                    response, price = f_dl.get_ingerence_GPT3(input_text, MODE, ENGINE, select_box_language)
+                    Res += f"{MODE} : {response} \n\n"
+                    res[MODE] = response
+                    total_price += price
+                res["PRICE"] = total_price
+            st.success("Done!!!")
 
-                st.markdown(f"**TITLE** : {res['TITLE']}", unsafe_allow_html=True)
-                st.markdown(f"**REASON FOR CUSTOMER CALL** : {res['REASON_FOR_CUSTOMER_CALL']}", unsafe_allow_html=True)
-                st.markdown(f"**SUMMARY** : {res['SUMMARY']}", unsafe_allow_html=True)
-                st.markdown(f"**TAGS** : {res['TAGS']}", unsafe_allow_html=True)
-                st.markdown(f"**SENTIMENT** : {res['SENTIMENT']}", unsafe_allow_html=True)
-                # show result
-                st.success(Res)
+            st.markdown(f"**TITLE** : {res['TITLE']}", unsafe_allow_html=True)
+            st.markdown(f"**REASON FOR CUSTOMER CALL** : {res['REASON_FOR_CUSTOMER_CALL']}", unsafe_allow_html=True)
+            st.markdown(f"**SUMMARY** : {res['SUMMARY']}", unsafe_allow_html=True)
+            st.markdown(f"**TAGS** : {res['TAGS']}", unsafe_allow_html=True)
+            st.markdown(f"**SENTIMENT** : {res['SENTIMENT']}", unsafe_allow_html=True)
+            # show result
+            st.success(Res)
 
     elif select_box_language == "Spanish":
         # change label select_box_language to Spanish
@@ -128,27 +127,26 @@ if uploaded_file!=None:
             process = st.button("Procesar")
 
         with col2:
-            if process:
-                with st.spinner(text="Procesando..."):
+            with st.spinner(text="Procesando..."):
 
-                    # get result in json format
-                    res = dict()
-                    res["ENGINE"] = ENGINE
-                    total_price = 0
-                    Res = ""
-                    for MODE in LIST_MODE:
-                        response, price = f_dl.get_ingerence_GPT3(input_text, MODE, ENGINE, select_box_language)
-                        Res += f"{MODE} : {response} \n\n"
-                        res[MODE] = response
-                        total_price += price
-                    res["PRICE"] = total_price
-                st.success('Done!')
+                # get result in json format
+                res = dict()
+                res["ENGINE"] = ENGINE
+                total_price = 0
+                Res = ""
+                for MODE in LIST_MODE:
+                    response, price = f_dl.get_ingerence_GPT3(input_text, MODE, ENGINE, select_box_language)
+                    Res += f"{MODE} : {response} \n\n"
+                    res[MODE] = response
+                    total_price += price
+                res["PRICE"] = total_price
+            st.success('Done!')
 
 
-                st.markdown(f"**TITULO** : {res['TITLE']}", unsafe_allow_html=True)
-                st.markdown(f"**MOTIVO DE LA LLAMADA DEL CLIENTE** : {res['REASON_FOR_CUSTOMER_CALL']}", unsafe_allow_html=True)
-                st.markdown(f"**RESUMEN** : {res['SUMMARY']}", unsafe_allow_html=True)
-                st.markdown(f"**CATEGORA** : {res['TAGS']}", unsafe_allow_html=True)
-                st.markdown(f"**SENTIMIENTO** : {res['SENTIMENT']}", unsafe_allow_html=True)
-                # show result
-                st.success(Res)
+            st.markdown(f"**TITULO** : {res['TITLE']}", unsafe_allow_html=True)
+            st.markdown(f"**MOTIVO DE LA LLAMADA DEL CLIENTE** : {res['REASON_FOR_CUSTOMER_CALL']}", unsafe_allow_html=True)
+            st.markdown(f"**RESUMEN** : {res['SUMMARY']}", unsafe_allow_html=True)
+            st.markdown(f"**CATEGORA** : {res['TAGS']}", unsafe_allow_html=True)
+            st.markdown(f"**SENTIMIENTO** : {res['SENTIMENT']}", unsafe_allow_html=True)
+            # show result
+            st.success(Res)
