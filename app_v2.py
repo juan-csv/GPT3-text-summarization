@@ -33,8 +33,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-
-
 #----------------------------------------------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------------------------------------------
 # sidebar information
@@ -91,8 +89,6 @@ if uploaded_file!=None:
         with col1:
             # create input text
             input_text = st.text_area("Input text:", value=EXAMPLE, height=500)
-            # create button
-            process = st.button("Process")
 
         with col2:
             with st.spinner(text="In progress..."):
@@ -123,8 +119,6 @@ if uploaded_file!=None:
         with col1:
             # create input text
             input_text = st.text_area("Ingresar texto:", value=EXAMPLE, height=500)
-            # create button
-            process = st.button("Procesar")
 
         with col2:
             with st.spinner(text="Procesando..."):
