@@ -12,7 +12,7 @@ The code is tested in python 3.7.8 and macOS Catalina
 Or You can run online [here](https://share.streamlit.io/juan-csv/gpt3-text-summarization/app_v2.py)
 
 
-![alt text](https://github.com/juan-csv/Understand-conversation-AI/blob/main/Media/app.gif)
+![alt text](https://github.com/juan-csv/gpt3-text-summarization/blob/main/Media/app.gif)
 
 
 
