@@ -7,7 +7,7 @@ This repository structures data in title, summary, tags, sentiment given a fragm
 # How to run:
 The code is tested in python 3.7.8 and macOS Catalina
 
-<pre><code>streamlit run app.py </code></pre>
+<pre><code>streamlit run app_v2.py </code></pre>
 
 Or You can run online [here](https://share.streamlit.io/juan-csv/gpt3-text-summarization/app_v2.py)
 
